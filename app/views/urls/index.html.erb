@@ -1,10 +1,8 @@
+<div class="main">
+<h2>Check Out the URL Shortener!</h2>
+<a href="urls/new">Create your Short URL</a>
+
+</div>
 
 
 
-<% @urls.each do |url| %>
-<div>
-	URL: <%= url[:link] %>  <br>
-<%= button_to "delete", {controller: :urls, action: :destroy, random_string: url[:random_string] }, :method => :delete %> 
-
-</div> <br>
-<% end %>

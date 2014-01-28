@@ -11,11 +11,10 @@
 	font-size: 28px;
 	border-radius: 5px;
 	margin-top: 150px;
-
 }
 
 a{
-    color: #FFFFFF;
+    color: #330033;
     text-decoration: none;
 }
 a:hover {color:#FF00FF;} 
@@ -31,8 +30,6 @@ a:hover {color:#FF00FF;}
     vertical-align:top;
     padding:2.5%;
     width:31.5%;
-
-
 }
 
 h1{
@@ -40,5 +37,13 @@ h1{
     display:inline-block;
     vertical-align:top;
     padding:0.5%;
+}
 
+.signin{
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	padding:2.5%;
 }

@@ -1,3 +1,4 @@
+
 .main{
 	padding: 20px;
 	width: 75%;
@@ -18,3 +19,26 @@ a{
     text-decoration: none;
 }
 a:hover {color:#FF00FF;} 
+
+.form{
+	text-align: center;
+	margin-top: 40px;
+}
+
+.row{
+    text-align:right;
+    display:inline-block;
+    vertical-align:top;
+    padding:2.5%;
+    width:31.5%;
+
+
+}
+
+h1{
+	 text-align:center;
+    display:inline-block;
+    vertical-align:top;
+    padding:0.5%;
+
+}

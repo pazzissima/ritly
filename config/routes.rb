@@ -1,9 +1,9 @@
 RitlyApp::Application.routes.draw do
 
-  # same as get "/", to: "urls#index" 
+
+
   root to: "urls#index"
 
-  #get "/urls", to: "urls#index"
  
   get "/urls/new", to: "urls#new"
 
@@ -15,8 +15,11 @@ RitlyApp::Application.routes.draw do
 
   post "urls", to: "urls#create"
 
-  #NEW!
 
-  post "/go/:random_string/delete", to: "urls#destroy"
+
+  resources :urls, :users, :sessions
+  get '/signup' => 'users#new'
+  delete '/signout', to: 'sessions#destroy'
+  get'/signin', to: 'sessions#new', as: 'sign_in'
 
 end

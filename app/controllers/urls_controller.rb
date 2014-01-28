@@ -1,5 +1,6 @@
 class UrlsController < ApplicationController
 
+
   def index
   	@urls = Url.all
   	render :index
@@ -13,7 +14,8 @@ class UrlsController < ApplicationController
   	new_url = params.require(:url).permit(:link)
   	new_url[:random_string] = SecureRandom.urlsafe_base64(6)
   	url = Url.create(new_url)
-  	redirect_to "/go/#{new_url[:random_string]}/preview"
+  	redirect_to "/go/#{url.random_string}/preview"
+    #active record
   end
 
   def preview
@@ -34,14 +36,6 @@ class UrlsController < ApplicationController
   def update
   end
 
-# NEW!!!
 
-  def destroy
-   	random_string = params.require(:random_string)
-  	url = Url.find_by random_string: random_string
-  	url.destroy
-
-  	redirect_to action: :index
-  end
 
 end
